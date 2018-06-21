@@ -13,10 +13,12 @@ Plug 'https://github.com/vim-syntastic/syntastic.git'
 Plug 'https://github.com/pangloss/vim-javascript.git'
 Plug 'https://github.com/xolox/vim-misc'
 Plug 'https://github.com/xolox/vim-session'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 syntax on
 colorscheme deus
+set number
 set tabstop=2
 set shiftwidth=2
 set expandtab
