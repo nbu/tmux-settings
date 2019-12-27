@@ -45,3 +45,8 @@ let g:syntastic_check_on_wq = 0
 let g:session_autoload = 'no'
 let g:session_autosave = 'no'
 
+command! TabsShow :set list | :set listchars=tab:>-
+command! TabsHide :set nolist
+command! TabsExpand :set expandtab
+command! TabsNoExpand :set noexpandtab
+
