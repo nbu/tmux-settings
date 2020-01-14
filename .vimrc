@@ -49,4 +49,4 @@ command! TabsShow :set list | :set listchars=tab:>-
 command! TabsHide :set nolist
 command! TabsExpand :set expandtab
 command! TabsNoExpand :set noexpandtab
-
+command! SudoSave :w !sudo tee %
