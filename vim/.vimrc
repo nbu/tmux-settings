@@ -1,4 +1,3 @@
-
 call plug#begin()
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'https://github.com/scrooloose/nerdtree.git'
@@ -14,17 +13,22 @@ Plug 'https://github.com/pangloss/vim-javascript.git'
 Plug 'https://github.com/xolox/vim-misc'
 Plug 'https://github.com/xolox/vim-session'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
+
+set laststatus=2
+set t_Co=256
 
 syntax on
 colorscheme deus
 set number
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set guifont=Droid\ Sans\ Mono\ for\ Powerline:h11
 set encoding=utf-8
-"execute pathogen#infect('bundle/{}', '~/.vim/bundle/{}')
+set hlsearch
 
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
@@ -49,4 +53,4 @@ command! TabsShow :set list | :set listchars=tab:>-
 command! TabsHide :set nolist
 command! TabsExpand :set expandtab
 command! TabsNoExpand :set noexpandtab
-command! SudoSave :w !sudo tee %
+cmap w!! w !sudo tee %
