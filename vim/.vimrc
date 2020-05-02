@@ -26,7 +26,7 @@ set number
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set guifont=Droid\ Sans\ Mono\ for\ Powerline:h11
+set guifont=Inconsolata\ Nerd\ Font\ 14
 set encoding=utf-8
 set hlsearch
 
