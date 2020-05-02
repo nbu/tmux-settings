@@ -2,7 +2,7 @@
 
 echo "Installing fonts..."
 
-fonts_dir="/usr/local/share/fonts"
+fonts_dir="${HOME}/.fonts"
 
 declare -A fonts
 fonts=(
@@ -10,18 +10,10 @@ fonts=(
     ["MesloLGS NF Regular.ttf"]="https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Regular.ttf"
 )
 
-install_fonts() {
-    for font in "${!fonts[@]}"
-    do
-        sudo wget -O "${fonts_dir}/${font}" ${fonts[$font]}
-    done
-}
+mkdir -p ${fonts_dir}
 
-echo "Need sudo access to install fonts. Continue (c) or skip (s)?"
-select cs in "c" "s"; do
-    case $cs in
-        c ) install_fonts; break;;
-        s ) break;;
-    esac
+for font in "${!fonts[@]}"
+do
+    wget -O "${fonts_dir}/${font}" ${fonts[$font]}
 done
 
