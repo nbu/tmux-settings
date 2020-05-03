@@ -2,7 +2,7 @@
 
 echo "Configuring VIM..."
 
-vimrc_dir=$(PWD)/$(dirname $BASH_SOURCE)
+vimrc_dir=$(dirname $(realpath $BASH_SOURCE))
 vimrc_file=".vimrc"
 
 # Configure plugin manager"

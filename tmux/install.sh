@@ -2,7 +2,7 @@
 
 echo "Configuring tmux..."
 
-tmux_dir=$(PWD)/$(dirname $BASH_SOURCE)
+tmux_dir=$(dirname $(realpath $BASH_SOURCE))
 tmux_file=".tmux.conf"
 
 # Configure plugin manager

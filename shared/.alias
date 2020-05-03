@@ -1,0 +1,22 @@
+#!/bin/bash
+
+alias lla="ls -la"
+
+alias k8s.address="microk8s.kubectl get all --all-namespaces | grep kubernetes-dashboard | grep ClusterIP"
+
+alias copy_to_clipboard="xargs echo"
+
+if hash xclip 2>/dev/null; then
+  alias copy_to_clipboard="xclip -selection clipboard"
+fi
+ 
+alias k8s.token='
+  token=$(microk8s.kubectl -n kube-system get secret | grep default-token | cut -d " " -f1)
+  whole_token=$(microk8s.kubectl -n kube-system describe secret $token)
+  echo ${whole_token} | sed "s/.*token\:\s\{1,\}\(.*\)/\1/" | ${copy_to_clipboard}
+'
+
+alias k8s.password='
+  config=$(microk8s.config )
+  echo ${config} | sed "s/.*password\:\s\{1,\}\(.*\)\$/\1/" | copy_to_clipboard
+'
