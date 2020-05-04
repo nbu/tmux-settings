@@ -12,10 +12,12 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 echo "Install Powerlevel10k..."
 
+set -e
 grep -q "Configuration provided by nbu/linux-settings" ~/${zshrc_file}
+res=$?
+set +e
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
-res=$?
 
 if [ ${res} -eq 1 ]; then
     echo >> ~/${zshrc_file}
