@@ -9,7 +9,10 @@ sudo apt install vifm
 
 echo "Configuring VIFM..."
 mkdir -p ${origin_conf_dir}
-mv ${origin_conf_dir}/${conf_file} ${origin_conf_dir}/${conf_file}.back
+if [ -f ${origin_conf_dif}/${conf_file} ]; then
+    mv ${origin_conf_dir}/${conf_file} ${origin_conf_dir}/${conf_file}.bak
+fi
+
 touch ~/${confi_file}
 echo "source ${custom_conf_dir}/${conf_file}" > ${origin_conf_dir}/${conf_file}
 
