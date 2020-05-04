@@ -23,12 +23,14 @@ set t_Co=256
 syntax on
 colorscheme deus
 set number
+set relativenumber
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set guifont=Inconsolata\ Nerd\ Font\ 14
 set encoding=utf-8
 set hlsearch
+set incsearch
 
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
