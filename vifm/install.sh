@@ -7,7 +7,8 @@ conf_file="vifmrc"
 echo "Install VIFM (need sudo access)..."
 sudo apt install vifm
 
-echo "Configuring VIFM"
+echo "Configuring VIFM..."
+mkdir -p ${origin_conf_dir}
 mv ${origin_conf_dir}/${conf_file} ${origin_conf_dir}/${conf_file}.back
 touch ~/${confi_file}
 echo "source ${custom_conf_dir}/${conf_file}" > ${origin_conf_dir}/${conf_file}
