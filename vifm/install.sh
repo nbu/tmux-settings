@@ -14,4 +14,4 @@ if [ -f ${origin_conf_dif}/${conf_file} ]; then
 fi
 touch ~/${confi_file}
 echo "source ${custom_conf_dir}/${conf_file}" > ${origin_conf_dir}/${conf_file}
-
+cp zenburn_1 ${origin_conf_dir}/colors
