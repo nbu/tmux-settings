@@ -7,16 +7,25 @@ zshrc_file=".zshrc"
 
 change=". ${zshrc_dir}/${zshrc_file}"
 
-echo "Install Oh-My-Zsh..."
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if [ ! -f "${HOME}/.oh-my-zsh" ]; then
+    echo "Install Oh-My-Zsh..."
+    echo "When installation completes exit zsh by typing zsh<Return>..."
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 
-echo "Install Powerlevel10k..."
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+powerlevel10k_dir=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
-set -e
+if [ ! -f "${powerlevel10k_dir}" ]; then
+    echo "Install Powerlevel10k..."
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${powerlevel10k_dir}
+else
+    git -C ${powerlevel10k_dir} pull
+fi
+
+cp ${zshrc_dir}/.p10k.zsh ${HOME}/
+
 grep -q "Configuration provided by nbu/linux-settings" ~/${zshrc_file}
 res=$?
-set +e
 
 if [ ${res} -eq 1 ]; then
     echo >> ~/${zshrc_file}
