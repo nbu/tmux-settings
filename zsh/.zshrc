@@ -1,4 +1,4 @@
-ZSH_THEME="powerlevel10k/powerlevel1"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git tmux ubuntu z)
 

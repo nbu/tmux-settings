@@ -9,11 +9,11 @@ change=". ${zshrc_dir}/${zshrc_file}"
 
 if [ ! -f "${HOME}/.oh-my-zsh" ]; then
     echo "Install Oh-My-Zsh..."
-    echo "When installation completes exit zsh by typing zsh<Return>..."
+    echo "When installation completes exit zsh by typing exit<Return>..."
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-powerlevel10k_dir=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+powerlevel10k_dir=${ZSH_CUSTOM:-${HOME}/.oh-my-zsh/custom}/themes/powerlevel10k
 
 if [ ! -f "${powerlevel10k_dir}" ]; then
     echo "Install Powerlevel10k..."
