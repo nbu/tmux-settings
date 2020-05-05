@@ -1,7 +1,14 @@
 #!/bin/bash
 
-echo "Install zsh (need sudo access)..."
-sudo apt install zsh
+isUbuntu
+ubuntu=$?
+
+if [ $ubuntu -eq 1 ]; then
+    echo "Install zsh (need sudo access)..."
+    sudo apt install zsh
+else
+    echo "Warning, OS is not supported. Be sure zsh is installed"
+fi
 
 echo "Configuring zsh..."
 

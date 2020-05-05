@@ -14,6 +14,7 @@ Plug 'https://github.com/xolox/vim-misc'
 Plug 'https://github.com/xolox/vim-session'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'ryanoasis/vim-devicons'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -21,7 +22,9 @@ set laststatus=2
 set t_Co=256
 
 syntax on
-colorscheme deus
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'medium'
+set bg=dark
 set number
 set relativenumber
 set tabstop=4
