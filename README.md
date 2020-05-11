@@ -16,7 +16,7 @@ E185: Cannot find color scheme 'deus'
 Press ENTER or type command to continue
 ```
 
-Continue by pressing ENTER. Install plulgins in VIM:
+Continue by pressing ENTER. Install plugins in VIM:
 > PlugInstall
 
 Restart VIM
