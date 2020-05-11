@@ -1,22 +1,41 @@
 # linux-settings
 
-Apply VIM settings:
-- Windows
-> vim_setup.bat
-- Linux
-> vim_setup.sh
+## Pre-requisites
 
-After applying settings run VIM
+- bash
+- zsh
+- vim
+- tmux
 
-It will complain with:
+### MacOS
+
+Install coreutils:
+
+```bash
+brew install coreutils
 ```
-Error detected while processing /c/Users/boris/.vimrc:
-line   20:
-E185: Cannot find color scheme 'deus'
-Press ENTER or type command to continue
+
+## Installation
+
+Run:
+
+```bash
+./install.sh
 ```
 
-Continue by pressing ENTER. Install plugins in VIM:
-> PlugInstall
+## Post-installation configuration
+
+### VIM
+
+Run VIM and install Plugins:
+
+```lisp
+:PlugInstall
+```
 
 Restart VIM
+
+### tmux
+
+Run tmux and install Plugins: __prefix + I__. By default prefix is __CTRL__.
+

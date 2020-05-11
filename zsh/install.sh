@@ -3,7 +3,7 @@
 isUbuntu
 ubuntu=$?
 
-if [ $ubuntu -eq 1 ]; then
+if [ $ubuntu -eq 0 ]; then
     echo "Install zsh (need sudo access)..."
     sudo apt install zsh
 else
