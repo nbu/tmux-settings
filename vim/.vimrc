@@ -14,7 +14,6 @@ Plug 'https://github.com/xolox/vim-misc'
 Plug 'https://github.com/xolox/vim-session'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'ryanoasis/vim-devicons'
-Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -22,8 +21,8 @@ set laststatus=2
 set t_Co=256
 
 syntax on
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'medium'
+colorscheme molokai
+let g:airline_theme='molokai'
 set bg=dark
 set number
 set relativenumber
@@ -34,6 +33,7 @@ set guifont=Inconsolata\ Nerd\ Font\ 14
 set encoding=utf-8
 set hlsearch
 set incsearch
+set spell
 
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
