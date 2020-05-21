@@ -14,6 +14,8 @@ Plug 'https://github.com/xolox/vim-misc'
 Plug 'https://github.com/xolox/vim-session'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'ryanoasis/vim-devicons'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -21,8 +23,8 @@ set laststatus=2
 set t_Co=256
 
 syntax on
-colorscheme molokai
-let g:airline_theme='molokai'
+colorscheme gruvbox
+let g:gruvbox_contrast_dark='hard'
 set bg=dark
 set number
 set relativenumber
@@ -58,4 +60,8 @@ command! TabsShow :set list | :set listchars=tab:>-
 command! TabsHide :set nolist
 command! TabsExpand :set expandtab
 command! TabsNoExpand :set noexpandtab
+
+command! ThemeDefault :colorscheme gruvbox | :let g:gruvbox_contrast_dark='hard' | :set bg=dark
+command! ThemeMolokai :colorscheme molokai | :let g:airline_theme='molokai'
+command! ThemeDracula :colorscheme dracula
 cmap w!! w !sudo tee %
