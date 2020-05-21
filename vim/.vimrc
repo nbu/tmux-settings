@@ -13,6 +13,8 @@ Plug 'https://github.com/pangloss/vim-javascript.git'
 Plug 'https://github.com/xolox/vim-misc'
 Plug 'https://github.com/xolox/vim-session'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'tfnico/vim-gradle'
+Plug 'vim-scripts/groovy.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'morhetz/gruvbox'
@@ -64,4 +66,6 @@ command! TabsNoExpand :set noexpandtab
 command! ThemeDefault :colorscheme gruvbox | :let g:gruvbox_contrast_dark='hard' | :set bg=dark
 command! ThemeMolokai :colorscheme molokai | :let g:airline_theme='molokai'
 command! ThemeDracula :colorscheme dracula
+
+command! SpellOff :set nospell
 cmap w!! w !sudo tee %

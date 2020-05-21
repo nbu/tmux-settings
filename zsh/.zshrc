@@ -1,6 +1,6 @@
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git tmux ubuntu z)
+plugins=(git tmux ubuntu z zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 

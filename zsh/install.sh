@@ -34,6 +34,9 @@ fi
 
 cp ${zshrc_dir}/.p10k.zsh ${HOME}/
 
+echo "Install autocompletion plugin..."
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 touch ~/${zshrc_file}
 grep -q "Configuration provided by nbu/linux-settings" ~/${zshrc_file}
 res=$?
