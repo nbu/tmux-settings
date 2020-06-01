@@ -21,6 +21,8 @@ alias k8s.password='
   echo ${config} | sed "s/.*password\:\s\{1,\}\(.*\)\$/\1/" | copy_to_clipboard
 '
 
-# Usage yaml_validate < file_to_validate.yaml
-alias yaml_validate="python -c 'import yaml, sys; print(yaml.safe_load(sys.stdin))'"
+# Usage validate_yaml < file_to_validate.yaml
+alias validate_yaml="python -c 'import yaml, sys; print(yaml.safe_load(sys.stdin))'"
 
+# Usage validate_json < file_to_validate.json
+alias validate_json="python -m json.tool"
