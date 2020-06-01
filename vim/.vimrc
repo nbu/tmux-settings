@@ -18,6 +18,9 @@ Plug 'vim-scripts/groovy.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'morhetz/gruvbox'
+Plug 'vimwiki/vimwiki'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -69,3 +72,4 @@ command! ThemeDracula :colorscheme dracula
 
 command! SpellOff :set nospell
 cmap w!! w !sudo tee %
+
