@@ -6,6 +6,7 @@
 - zsh
 - vim
 - tmux
+- pip
 
 ### MacOS
 
