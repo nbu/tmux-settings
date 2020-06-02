@@ -41,6 +41,10 @@ if [ ! -d "${autocomplete_dir}" ]; then
 fi
 chmod -R 755 ${autocomplete_dir}
 
+echo "Install fzf command-line fuzzy finder"
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
 touch ~/${zshrc_file}
 grep -q "Configuration provided by nbu/linux-settings" ~/${zshrc_file}
 res=$?

@@ -1,6 +1,7 @@
 ZSH_THEME="powerlevel10k/powerlevel10k"
+export FZF_BASE=~/.fzf
 
-plugins=(git tmux ubuntu z zsh-autosuggestions nvm)
+plugins=(git tmux ubuntu z zsh-autosuggestions nvm fzf)
 
 source $ZSH/oh-my-zsh.sh
 
