@@ -2,7 +2,6 @@
 
 isOS() {
     os=$1
-    echo "OS is: $os"
     if [ -f /etc/os-release ]; then
         grep "^NAME.*$os" /etc/os-release
         return $?
@@ -19,4 +18,12 @@ isUbuntu() {
 isCentOS() {
     isOS "CentOS"
     return $?
+}
+
+isOSX() {
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        return 0
+    else
+        return 1
+    fi
 }
