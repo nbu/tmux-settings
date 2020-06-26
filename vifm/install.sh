@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. $(dirname $BASH_SOURCE)/../utils.sh
+
 custom_conf_dir=$(dirname $(realpath $BASH_SOURCE))
 origin_conf_dir="${HOME}/.config/vifm"
 conf_file="vifmrc"

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. $(dirname $BASH_SOURCE)/../utils.sh
+
 echo "Installing fonts..."
 
 fonts_dir="${HOME}/.fonts"

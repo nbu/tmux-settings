@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. $(dirname $BASH_SOURCE)/../utils.sh
+
 isUbuntu
 ubuntu=$?
 
