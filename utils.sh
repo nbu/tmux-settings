@@ -15,6 +15,11 @@ isUbuntu() {
     return $?
 }
 
+isMint() {
+    isOS "Linux Mint"
+    return $?
+}
+
 isCentOS() {
     isOS "CentOS"
     return $?

@@ -8,8 +8,9 @@ conf_file="vifmrc"
 
 isUbuntu
 ubuntu=$?
+mint=$?
 
-if [ $ubuntu -eq 0 ]; then
+if [ $ubuntu -eq 0 ] || [ $mint -eq 0 ]; then
     echo "Install VIFM (need sudo access)..."
     sudo apt install vifm
 else
