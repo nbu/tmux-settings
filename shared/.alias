@@ -27,4 +27,4 @@ alias validate_yaml="python -c 'import yaml, sys; print(yaml.safe_load(sys.stdin
 # Usage validate_json < file_to_validate.json
 alias validate_json="python -m json.tool"
 
-alias docker.start.swagger="docker run -d -p 80:8080 swaggerapi/swagger-editor"
+alias docker.start.swagger.8787="docker run -d -p 8787:8080 swaggerapi/swagger-editor"
