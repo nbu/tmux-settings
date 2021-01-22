@@ -14,3 +14,7 @@ mv ~/${tmux_file} ~/${tmux_file}.bak
 touch ~/${tmux_file}
 echo "source-file ${tmux_dir}/${tmux_file}" > ~/${tmux_file}
 
+# Install tmuxinator
+echo "Install tmuxinator (need sudo access)..."
+sudo gem install tmuxinator
+

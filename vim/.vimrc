@@ -36,7 +36,7 @@ set relativenumber
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set guifont=Inconsolata\ Nerd\ Font\ 14
+set guifont=Inconsolata\ Nerd\ Font:h14
 set encoding=utf-8
 set hlsearch
 set incsearch
@@ -72,4 +72,13 @@ command! ThemeDracula :colorscheme dracula
 
 command! SpellOff :set nospell
 cmap w!! w !sudo tee %
+
+let g:syntastic_mode_map = { 'mode': 'passive' }
+
+"Key mappings
+
+nmap <CR> i<CR><Esc>
+nmap oo o<Esc>
+set ttimeoutlen=500
+set timeoutlen=500
 
