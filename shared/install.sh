@@ -23,3 +23,9 @@ else
 fi
 
 pip3 install pyyaml
+
+echo "===> Install SdkMan (https://sdkman.io/)..."
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk version
+

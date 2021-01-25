@@ -10,3 +10,8 @@ source $ZSH/oh-my-zsh.sh
 source ${NBU_LINUX_SETTINGS}/shared/.alias
 source ${NBU_LINUX_SETTINGS}/shared/.env
 
+# https://www.linuxjournal.com/content/boost-productivity-bash-tips-and-tricks
+generateqr() {
+    printf "$@" | curl -F-=\<- qrenco.de
+}
+
