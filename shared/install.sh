@@ -24,8 +24,25 @@ fi
 
 pip3 install pyyaml
 
-echo "===> Install SdkMan (https://sdkman.io/)..."
+echo "Install SdkMan (https://sdkman.io/)..."
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk version
+
+echo "Install kubectl (need sudo access)..."
+pushd /tmp/
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+echo "$(<kubectl.sha256) kubectl" | sha256sum --check
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+popd
+kubectl version --client
+
+echo "Install AWS CLI Version 2 (need sudo access)..."
+pushd /tmp/
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+aws --version
+popd
 
